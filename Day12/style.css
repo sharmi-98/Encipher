@@ -1,0 +1,45 @@
+
+.block {
+    display: block;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inline {
+    display: inline;
+    background-color: lightgreen;
+    padding: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    background-color: lightcoral;
+    margin: 5px;
+    text-align: center;
+}
+
+
+.display-none {
+    display: none;
+}
+
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+
+.inline-to-block {
+    display: block;
+    background-color: yellow;
+    margin: 10px 0;
+}
+
+.block-to-inline {
+    display: inline;
+    background-color: orange;
+    padding: 5px;
+}
