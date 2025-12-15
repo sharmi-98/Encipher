@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wikipedia</title>
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background:#fff;
+  color:#202122;
+}
+
+.wrapper {
+  display: flex;
+  width: 1200px; 
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.main {
+  width: 860px;
+  padding: 20px 32px;
+}
+
+.sidebar{
+  width:28%;
+  border-left:1px solid #a2a9b1;
+  padding:20px;
+  font-size:14px;
+}
+
+.lang{
+  float: right;
+  font-size: 14px;
+  color: #3366cc;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 14px;
+}
+
+h1{
+  font-family: serif;
+  font-size:32px;
+  font-weight:400;
+  border-bottom:1px solid #a2a9b1;
+  padding-bottom:8px;
+  margin-bottom:6px;
+}
+
+.tabs{
+    display: flex;
+  align-items: center;
+} 
+ 
+.left{
+  display: flex;
+  gap: 15px;
+  margin-right: auto;
+}
+
+.tabs a{
+  text-decoration:none;
+  color:#3366cc;
+  padding:6px 0;
+  margin-left: 18px;
+}
+
+.tabs a.active{
+  color:#000;
+  border-bottom:2px solid #000;
+}
+.tabs select.Black{
+    margin-left: 12px; 
+    vertical-align: middle;
+    border: #fff;
+    font-size: 15px;
+    width: 60px;
+}
+
+.source{
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.content p{
+  font-size:16px;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+
+.content a{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.section-title{
+  font-family: serif;
+  font-size:22px;
+  font-weight:400;
+  border-bottom:1px solid #a2a9b1;
+  margin:28px 0 14px;
+}
+
+.sub-title{
+  font-family: serif;
+  font-size:18px;
+  font-weight:600;
+  margin:14px 0;
+}
+
+ol{
+  margin-left:22px;
+  margin-bottom:14px;
+}
+
+.example{
+  font-style:italic;
+  margin-left:20px;
+}
+.sidebar {
+  width: 340px; 
+  border-left: 1px solid #a2a9b1;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.sidebar h3{
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.sidebar label{
+  display:block;
+  margin:6px 0;
+}
+
+.sidebar input{
+  margin-right:6px;
+}
+
+.clear{
+  clear:both;
+}
+.button-style{
+    
+  padding: 1px 5px;  
+  font-size: 18px;   
+  border-radius: 6px;
+  border-color:white;
+}
+.thin-line{
+     border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15); 
+  filter: blur(0.4px);           
+  margin: 8px 0; 
+
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+   <div class="main">
+    <select class="lang">
+    <option selected>ऋ 78 languages<small>≚</small></option>
+    <option>English</option>
+    <option>Tamil</option>
+    <option>Hindi</option>
+    <option>French</option>
+    </select>
+
+    <h1>Article (grammar)</h1>
+    <div class="tabs">
+        <div class="left">
+        <a href="#" class="active">Article</a>
+        <a href="#">Talk </a>
+        </div>
+        <a href="#" class="active">Read</a>
+        <a href="#">Edit</a>
+        <a href="#">View history</a>
+        <select class="Black">
+        <option selected>Tools</option>
+        <option>Page settings</option>
+        <option>History</option>
+        <option>Print</option>
+        </select>
+    </div>
+    <hr><br>
+    <div class="source">From Wikipedia, the free encyclopedia</div>
+    <div class="content">
+      <p>
+        In <a href="#">grammar</a>, an <b>article</b> is any member of a class of dedicated words that are used with <a href="#">noun</a> to the identifiability of object type or itself. <a href="#">[vague]</a> The category of articles constitutes a <a href="#">part of speech</a>.
+      </p>
+      <p>
+        Articles combine with nouns to form noun phrases, and typically specify the grammatical <a href="#">definiteness</a> of the noun phrase. In <a href="#">English</a>, <i>the</i> and <i>a</i> (rendered as <i>an</i> when followed by a vowel sound) are the definite and indefinite articles respectively. Articles in many other languages also carry additional grammatical information such as <a href="#">gender</a>, <a href="#">number</a>, and <a href="#">case</a>. Articles are part of a broader category called <a href="#">determiners</a>, which also include <a href="#">demonstratives</a>, <a href="#">possessive determiners</a>, and <a href="#">quantifiers</a>. In linguistic <a href="#">interlinear glossing</a>, articles are abbreviated as <small>ART</small>.
+      </p>
+      <div class="section-title">Types of article [<a href="#">edit</a>]</div>
+      <div class="sub-title">Definite article [<a href="#">edit</a>]</div>
+      <p><i>&nbsp;&nbsp;&nbsp;&nbsp;"Definite article" redirects here. For the comedy album, see <a href="#">Definite Article</a>.</i></p>
+      <p>
+        A <b>definite article</b> is an article that marks a <a href="#">definite noun phrase</a>. Definite articles, such as the English<a href="#"> <i>the</i></a>, are used to refer to a particular member of a group. It may be something that the speaker has already mentioned, or it may be something uniquely specified.
+      </p>
+      <p>
+        For example, Sentence 1 uses the definite article and thus expresses a request for a particular book. In contrast, Sentence 2 uses an indefinite article and thus conveys that the speaker would be satisfied with any book.
+      </p>
+      <ol>
+        <li>Give me <i>the</i> book.</li>
+        <li>Give me <i>a</i> book.</li>
+      </ol>
+      <p>
+        The definite article can also be used in English to indicate a specific class among other classes:
+      </p>
+      <p class="example">
+        <b>The </b>cabbage white butterfly lays its eggs on members of <b>the </b>Brassica genus.
+      </p>
+    </div>
+    </div>
+    <div class="sidebar">
+    <h3>Appearance 
+        <input type="button" value="Hide" class="button-style"><br><br>
+        <hr class="thin-line">
+    </h3>
+    <p><b>Text</b></p>
+    <hr class="thin-line">
+        <label><input type="radio" name="text-size" > Small</label>
+        <label><input type="radio" name="text-size" checked> Standard</label>
+        <label><input type="radio" name="text-size"> Large</label>
+    <p style="margin-top:10px;"><b>Width</b></p>
+    <hr class="thin-line">
+        <label><input type="radio" name="width" checked> Standard</label>
+        <label><input type="radio" name="width"> Wide</label>
+    <p style="margin-top:10px;"><b>Color (beta)</b></p>
+    <hr class="thin-line">
+        <label><input type="radio" name="color" > Automatic</label>
+        <label><input type="radio" name="color" checked> Light</label>
+        <label><input type="radio" name="color"> Dark</label>
+</div>
+</div>
+</body>
+</html>
