@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        a{
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: aquamarine;
+            
+        }
+        a:link{
+           color: brown;
+        }
+        a:visited{
+            color:darkblue;
+            background-color: darkgrey;
+        }
+        a:hover{
+            color: black;
+            background-color: coral;
+        }
+        a:active{
+            color: crimson;
+            background-color: blanchedalmond;
+        }
+        input:focus,input:hover{
+            color: antiquewhite;
+            background-color: black;
+        }
+        p:first-child{
+            color: brown;
+            font-size: 30px;
+        }
+        .last p:last-child{
+            color: blue;
+            font-size: 40px;
+        }
+        p em:first-child{
+            color:deeppink;
+        }
+        p:first-child em{
+            color:deeppink;
+        }
+        q:lang(no){
+            quotes: "(" ")";
+            background-color: aquamarine;
+        }
+        h3{
+            display: none;
+            color: blue;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+        div:hover h3{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>common Pseudo-classes</h1>
+    <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Click here to learn </a><br><br>
+    <input type="button" value="Submit">
+    <hr>
+    <div>
+        <p>The first-child pseudo-class matches a specific element that is the first child of another element</p>
+        <p>first-child pseudo-class</p>
+    </div>
+      <div class="last">
+        <p>The first-child pseudo-class matches a specific element that is the first child of another element</p>
+        <p>first-child pseudo-class</p>
+    </div>
+    <hr>
+   <p>The <em>first-child pseudo-class </em>matches a specific element that is the <em>first child </em> of another element</p>
+   <section>
+     <p>The <em>first-child pseudo-class </em>matches a specific element that is the <em>first child </em> of another element</p>
+   </section>
+   <hr>
+   <q lang="no">Pseudo-class </q><br>
+   <br>
+   <div style="font-size: 30px;">Hover to Show Tooltip
+    <h3>Hello! I am Sharmila</h3>
+   </div>
+    
+
+
+
+
+</body>
+</html>

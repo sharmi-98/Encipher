@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+    <style>
+        .Descendant p{
+            background-color: blueviolet;
+            color: black;
+            width: 300px;
+            border:2px solid black;
+            border-radius: 5px;
+        }
+        .Child>p{
+            background-color: brown;
+            color: aliceblue;
+            width: 300px;
+            border:2px solid black;
+            border-radius: 5px;
+
+        }
+         .Next+p{
+            background-color:cadetblue;
+            color: black;
+            width: 300px;
+            border:2px solid black;
+            border-radius: 5px;
+
+        }
+        .Subsequent~p{
+            background-color: coral;
+            color:floralwhite;
+            width: 300px;
+            border:2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descendant combinator</h1>
+    <div class="Descendant">
+        <p>The descendant combinator matches all elements that are descendants </p>
+        <h1><p>Descendant Combinator(Space)</p></h1>
+    </div>
+    <hr>
+    <h1>Child combinator</h1>
+    <div class="Child">
+        <p>The child combinator selects all elements that are direct children of a specified element</p>
+        <section>
+            <p>Child combinator(>)</p>
+        </section>
+    </div>
+    <hr>
+    <h1>Next sibling combinator</h1>
+    <div class="Next">
+        <p>The next sibling combinator is used to select an element that is directly after a specific element</p>
+    </div>
+    <p>Next sibling combinator(+)</p>
+    <hr>
+    <h1>Subsequent-sibling Combinator</h1>
+    <div class="Subsequent">
+        <p>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</p>
+    </div>
+    <p>Subsequent-sibling combinator(~)</p>
+    <p>End of combinators</p>
+
+</body>
+</html>
