@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LookBook</title>
+    <style>
+.lookbook {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #fff5f6, #ffffff);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.lookbook-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.lookbook-header p {
+  font-size: 17px;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+
+.lookbook-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.lookbook-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.overlay span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.lookbook-card:hover img {
+  transform: scale(1.08);
+}
+
+.lookbook-card:hover .overlay {
+  opacity: 1;
+}
+
+
+.lookbook-btn {
+  display: inline-block;
+  margin-top: 70px;
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #d15b5b, #f08a8a);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(209,91,91,0.45);
+  transition: 0.3s ease;
+}
+
+.lookbook-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="lookbook">
+  <div class="lookbook-header">
+    <h2>The Sharmi Lookbook</h2>
+    <p>
+      A curated edit of timeless jewelry styled for everyday elegance
+      and unforgettable moments.
+    </p>
+  </div>
+
+  <div class="lookbook-grid">
+    <div class="lookbook-card">
+      <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0" alt="">
+      <div class="overlay">
+        <span>Everyday Grace</span>
+      </div>
+    </div>
+
+    <div class="lookbook-card">
+      <img src="https://cdn.eternz.com/thumbnails/products/806528229_ae69bd38_thumbnail_1024.jpg" alt="">
+      <div class="overlay">
+        <span>Minimal Luxury</span>
+      </div>
+    </div>
+
+    <div class="lookbook-card">
+      <img src="https://tyaani.com/cdn/shop/files/TN00899MODEL.jpg?v=1745924842&width=1100" alt="">
+      <div class="overlay">
+        <span>Statement Evenings</span>
+      </div>
+    </div>
+
+    <div class="lookbook-card">
+      <img src="https://img.tatacliq.com/images/i13/437Wx649H/MP000000019009795_437Wx649H_202308312359211.jpeg" alt="">
+      <div class="overlay">
+        <span>Modern Muse</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="explore.html" class="lookbook-btn">Explore Full Lookbook</a>
+
+
+</body>
+</html>

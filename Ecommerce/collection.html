@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+
+.product-card{
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.product-card:hover{
+  transform: translateY(-8px);
+}
+
+.product-card img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.product-card h3{
+  font-size: 18px;
+  margin: 15px 0 5px;
+}
+
+.price{
+  color: #c85757;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.rating{
+  color: #ffb703;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+
+.product-card button{
+  margin-top: 12px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #d86b6b, #c85757);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover{
+  opacity: 0.9;
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2L5oFXWLZ8OFConAQ9Q0Usa0wrGX3yzGtQ&s" alt="">
+      <h3>Opal Shape Star Bracelet</h3>
+      <p class="price">₹2,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQroXblv19s3dO-muD1wTz-AyN51VO5IJTNjA&s" alt="">
+      <h3>Dainty Western Earring</h3>
+      <p class="price">₹1,799</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPU_3RVoJIz-EEtlCBAuz0KxelGJe1lo7pNw&s" alt="">
+      <h3>Butterfly Necklace</h3>
+      <p class="price">₹1,299</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRIDYb85bwlPBiB4qNMaJ31Q5yKkVv_29HnFFp7ICVHZW5nhSec05vjMqjwYHZ2wpG1X0jh-JB88ZdZ_MUnXkfT2hLwfOvKla6L5V0SRKU" alt="">
+      <h3>Flower Bracelet</h3>
+      <p class="price">₹3,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://thumbs.dreamstime.com/b/exquisite-collection-gold-diamond-jewelry-elegantly-arranged-rich-purple-linen-fabric-soft-warm-light-close-366944921.jpg" alt="">
+      <h3>Rich Gold And Diamond </h3>
+      <p class="price">₹3,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://www.goldmarket.fr/wp-content/uploads/2025/08/41f05476thumbnail.jpeg.webp" alt="">
+      <h3>Rose Gold</h3>
+      <p class="price">₹1,199</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzP4KvZh3KnkwkQfr3BOi5ToBpH8BKdi-RYQ&s" alt="">
+      <h3>Panash Gold Plate</h3>
+      <p class="price">₹4,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXCDbcOcbgP6Vz03s8bdl8lrCDCE3SYkI3A&s" alt="">
+      <h3>Belt Chain Ring</h3>
+      <p class="price">₹1,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePYGMYAqiooUKD8NVI2I7uxSidbYmhvrp0g&s" alt="">
+      <h3>Cocktail Bracelet</h3>
+      <p class="price">₹1,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+     <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJN72lV3Lu69p6CwMvlkk73KGm6xJ4s3bcg&s" alt="">
+      <h3>Navrathan</h3>
+      <p class="price">₹1,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+     <div class="product-card">
+      <img src="https://i.pinimg.com/564x/09/f3/39/09f33932271d948a1c22bb69fa01aed3.jpg" alt="">
+      <h3>Light Gold Set</h3>
+      <p class="price">₹1,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+     <div class="product-card">
+      <img src="https://www.onlinepng.com/cdn/shop/files/CP663151-1.jpg?v=1719404891" alt="">
+      <h3>Hanging Chain Pendant</h3>
+      <p class="price">₹1,499</p>
+      <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+      <button>Add to Cart</button>
+    </div>
+
+    
+
+
+  </div>
+    
+</body>
+</html>

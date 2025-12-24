@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+.signup-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff0f2, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 460px;
+  background: #fff;
+  border-radius: 28px;
+  padding: 55px 45px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.signup-box h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.signup-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 14px;
+  border: 1.5px solid #ddd;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 6px;
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -7px;
+  font-size: 12px;
+  color: #e06a6a;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(135deg, #e06a6a, #f29c9c);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(224,106,106,0.45);
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+}
+
+.login-link {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link a {
+  color: #e06a6a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section class="signup-section">
+  <div class="signup-box">
+
+    <h2>Create Your Account</h2>
+    <p class="signup-text">
+      Join Sharmi Store and unlock exclusive styles, faster checkout,
+      and special member-only offers.
+    </p>
+
+    <form class="signup-form">
+      <div class="input-group">
+        <input type="text" required>
+        <label>Full Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" required>
+        <label>Email Address</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required>
+        <label>Password</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required>
+        <label>Confirm Password</label>
+      </div>
+
+      <button type="submit" class="signup-btn">Create Account</button>
+    </form>
+
+    <p class="login-link">
+      Already have an account?
+      <a href="login.html">Login here</a>
+    </p>
+
+  </div>
+</section>
+
+</body>
+</html>
