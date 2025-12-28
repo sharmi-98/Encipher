@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task-1
+        let name=prompt("Enter name");
+        function greeting(name){
+            alert("Hello "+name);
+        }
+        greeting(name);
+
+        //task-2
+        let num=prompt("Enter number");
+        function EvenOdd(num){
+            if(num%2==0){
+                alert(num +" is even");
+            }
+            else{
+                alert(num+" is odd");
+            }
+        }
+        EvenOdd(num);
+
+        //task-3
+        let num1=prompt("Enter num1");
+        let num2=prompt("Enter num2");
+        let op=prompt("Enter operator");
+        switch(op){
+            case "+":
+                alert(Number(num1)+Number(num2));
+                alert(num1+num2);
+                break;
+            case "-":
+                alert(num1-num2);
+                break;
+            case "*":
+                alert(num1*num2);
+                break;
+            case "/":
+                alert(num1/num2);
+                break;
+            default:
+                alert("Inavlid");
+        }
+
+        //task-4
+        let age=prompt("Enter age");
+        if(age>=18){
+            alert("Eligible");
+        }
+        else{
+           alert("Not Eligible"); 
+        }
+
+        //task-5
+        let n=prompt("Enter number");
+        for(let i=1;i<=10;i++){
+            console.log(i+"x"+n+"="+n*i);
+        }
+
+        //task-6
+        let limit=prompt("Enter limit");
+        function Sum(limit){
+            let sum=0;
+            for(let i=1;i<=limit;i++){
+                sum+=i;
+            }
+            alert(sum);
+        }Sum(limit);
+
+        //task-7
+        let password=prompt("Enter password");
+        if(password.length>=8){
+            alert("Valid");
+        }
+        else{
+            alert("Invalid");
+        }
+
+        //task-8
+        let mark=prompt("Enter marks");
+        if(mark>=90){
+            alert("A grade");
+        }
+        else if(mark>=70&&mark<90){
+            alert("B grade");
+        }
+        else if(mark>=50&&mark<70){
+            alert("C grade");
+        }
+        else{
+            alert("Fail");
+        }
+
+        //task-9
+        let a=prompt("Enter a");
+        let b=prompt("Enter b");
+        let c=prompt("Enter c");
+        if(a>b&&a>c){
+            alert("a is largest");
+        }
+        else if(b>a&&b>c){
+            alert("b is largest");
+        }
+        else{
+            alert("c is largest");
+        }
+
+        //task-10
+        let user="sharmi";
+        let pass=123;
+        let username=prompt("Enter username");
+        let password=prompt("Enter password");
+        if(user===username&&pass===password){
+            alert("success");
+        }else{
+            alert("failed");
+        }
+
+        //task-11
+        let lim=prompt("Enter limit");
+        let evencount=0;
+        for(let i=1;i<=lim;i++){
+            if(i%2==0){
+                evencount++;
+            }
+        }
+        alert(evencount);
+
+        //task-12
+        let n=prompt("Enter number");
+        function reverse(n){
+        let rev="";
+        for(let i=n.length-1;i>=0;i--){
+            rev+=n[i];
+        }
+        alert(rev);
+        }reverse(n);
+
+        function reverse(n){
+        let rev=0;
+        while(n!=0){
+            let y=n%10;
+            rev=rev*10+y;
+            n=Math.floor(n/10);
+        }
+        alert(rev);
+        }reverse(n);
+
+        //task-13
+        let p=prompt("Enter p");
+        let n=prompt("Enter n");
+        let r=prompt("Enter r");
+        function simple(p,n,r){
+            let si=(p*n*r)/100;
+            alert(si);
+        }simple(p,n,r);
+
+        //task-14
+        let fix=20;
+        let guess=Number(prompt("Enter number"));
+        if(guess>fix){
+            alert("too high");
+        }
+        else if(guess<fix){
+            alert("too low");
+        }
+        else{
+            alert("correct");
+        }
+
+        //task-15
+        let prime=prompt("Enter number");
+        let count=0;
+        for(let i=1;i<=prime;i++){
+            if(prime%i===0){
+                count++;
+            }
+        }
+        if(count==2){
+            alert("prime");
+        }
+        else{
+            alert("Not prime");
+        }
+
+        //task-16
+        let num=prompt("Enter number");
+        function factorial(num){
+            let fact=1;
+            for(let i=1;i<=num;i++){
+                fact*=i;
+            }
+            alert(fact);
+        }factorial(num);
+
+        //task-17
+        let n=prompt("Enter number");
+        let count=0;
+        while(n!=0){
+            let y=n%10;
+            count++;
+            n=Math.floor(n/10);
+        }
+        alert(count);
+
+        //task-18
+        let menu=prompt("Enter option");
+        let a=prompt("Enter a");
+        let b=prompt("Enter b");
+        switch(menu){
+            case "1":
+                alert(a+b);
+                break;
+            case "2":
+                alert(a-b);
+                break;
+            case "3":
+                alert(a*b);
+                break;
+            default:
+                alert("Invalid");
+        }
+
+        //task-19
+        let limit=prompt("Enter limit");
+        let evensum=0;
+        let oddsum=0;
+        for(let i=0;i<=limit;i++){
+            if(i%2==0){
+                evensum+=i;
+            }
+            else{
+                oddsum+=i;
+            }
+        }
+        alert("Evensum"+evensum+","+"Oddsum"+oddsum);
+
+        //task-20
+        let user=confirm("Do you want to exit?");
+        if(user){
+            alert("Exit successfully");
+        }else{
+            alert("continue");
+        }
+        
+    </script>
+    
+</body>
+</html>
