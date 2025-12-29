@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task-1
+        let hour=prompt("Enter time");
+        function greet(hour){
+            if(hour>=0&&hour<12){
+                alert("Good Morning");
+            }
+            else if(hour>=12&&hour<=16){
+                alert("Good Afternoon");
+            }
+            else{
+                alert("Good Evening");
+            }
+        }greet(hour);
+
+        //task-2
+        let n=prompt("Enter number");
+        if(n>0){
+            alert("positive");
+        }
+        else if(n<0){
+            alert("Negative");
+        }
+        else{
+            alert("Zero");
+        }
+
+        //task-3
+        let total=prompt("Enter total");
+        let attended=prompt("Enter attended");
+        let attendance=(attended/total)*100;
+        if(attendance>75){
+            alert("Eligible");
+        }
+        else{
+            alert("Not eligible");
+        }
+
+        //task-4
+        let limit=prompt("Enter limit");
+        let large=0;
+        for(let i=1;i<=limit;i++){
+            let n=prompt("Enter number");
+            if(n>large){
+                large=n;
+            }
+        }
+        alert(large);
+
+        //task-5
+        let choice=Number(prompt("1 or 2"));
+        let temp=Number(prompt("Enter temperature"));
+        function conversion(choice,temp){
+            if(choice==1){
+                alert((temp*9/5)+32);
+            }
+            else{
+                alert((temp-32)*5/9);
+            }
+        }conversion(choice,temp);
+
+        //task-6
+        let user=prompt("Enter string");
+        let count=0;
+        for(let i=0;i<=user.length;i++){
+            if("aeiouAEIOU".includes(user[i])){
+                count++;
+            }
+        }
+        alert(count);
+
+        //task-7
+        let n=prompt("Enter number");
+        for(let i=1;i<=n;i++){
+            let row="";
+            for(let j=1;j<=i;j++){
+                row+=j+" ";
+            }
+            console.log(row);
+        }
+
+        //task-8
+        let a=prompt("Enter a");
+        let b=prompt("Enter b");
+        let c=prompt("Enter c");
+        if(a<b&&a<c){
+            alert("a is small");
+        }
+        else if(b<a&&b<c){
+            alert("b is small");
+        }
+        else{
+            alert("c is small");
+        }
+
+        //task-9
+        let item=prompt("Enter items");
+        let price=prompt("Enter price");
+        let total=item*price;
+        alert(total);
+        
+        //task-10
+        let year=prompt("Enter year");
+        if(year%4===0&&year%100!==0||year%400==0){
+            alert("Leap year");
+        }
+        else{
+            alert("Not leap year");
+        }
+
+        //task-11
+        let limit=prompt("Enter limit");
+        let count=0;
+        for(let i=1;i<=limit;i++){
+            if(i%2!=0){
+                count++;
+            }
+        }
+        alert(count);
+
+        //task-12
+        let name=prompt("Enter string");
+        let rev="";
+        function palindrome(name){
+        for(let i=name.length-1;i>=0;i--){
+            rev+=name[i];
+        }
+        if(name==rev){
+            alert("Palindrome");
+        }
+        else{
+            alert("Not palindrome");
+        }
+        }palindrome(name);
+
+        //task-13
+        let base=prompt("Enter base");
+        let exponent=prompt("Enter exponent");
+        let res=1;
+        for(let i=1;i<=exponent;i++){
+            res*=base;
+        }
+        alert(res);
+
+        //task-14
+        let mark1=Number(prompt("Enter mark1"));
+        let mark2=Number(prompt("Enter mark2"));
+        let mark3=Number(prompt("Enter mark3"));
+        let total=mark1+mark2+mark3;
+        let average=total/3;
+        if(average>=60){
+            alert("Pass");
+        }
+        else{
+            alert("Fail");
+        }
+
+        //task-15
+        let rupees=prompt("Enter rupees");
+        let dollar=rupees/83;
+        alert(dollar);
+
+        //task-16
+        let n=prompt("Enter number");
+        let sum=0;
+        while(n!=0){
+            let y=n%10;
+            sum+=y;
+            n=Math.floor(n/10);
+        }
+        alert(sum);
+
+        //task-17
+        do{
+            var ch=prompt("Enter choice");
+            if(ch==1) alert("Hi");
+            if(ch==2) alert("Hello");
+        }while(ch!=3);
+
+        //task-18
+        let num=prompt("Enter Range");
+        let sum=0;
+        for(let i=1;i<=num;i++){
+            sum+=Number(prompt("Enter number"));
+        }
+        alert(sum/num);
+
+        //task-19
+        let num=prompt("Enter number");
+        if(num%3==0&&num%5==0){
+            alert("Both");
+        }else if(num%3==0){
+            alert("only 3");
+        }else if(num%5==0){
+            alert("only 5");
+        }else{
+            alert("Not both");
+        }
+
+        //task-20
+        let password="123";
+        let attempt=0;
+        while(attempt<3){
+            let pass=prompt("Enter password");
+            if(pass==password){
+            alert("Success");
+            break;
+            }
+            attempt++;
+        }
+        if(attempt==3){
+            alert("Account locked");
+        }
+
+
+
+
+    </script>
+</body>
+</html>
