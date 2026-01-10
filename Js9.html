@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input id="num">
+    <input type="button" value="submit" onclick="check()"/>
+    <p id="er"></p> -->
+
+    <!-- <input type="button" value="get name" onclick="getuser()"/>
+    <div id="res"></div> -->
+
+    <!-- <input type="button" value="fetch" onclick="load()"/>
+    <p id="msg"></p> -->
+
+    <!-- <input id="age">
+    <input type="button" value="submit" onclick="agecheck()"/> -->
+
+    <!-- <input type="button" value="post" onclick="count()"/>
+    <p id="out"></p> -->
+
+    <!-- <p id="welcome"></p> -->
+
+    <!-- <input type="button" value="Api call" onclick="Confirm()"/>
+    <p id="msg"></p> -->
+
+    <!-- <input id="uname">
+    <input type="button" value="check" onclick="validate()"/>
+    <p id="err"></p> -->
+
+    <!-- <input type="button" value="fetch" onclick="wrong()"/>
+    <p id="msg"></p> -->
+
+    <!-- <input type="button" value="fetch" onclick="bgcolor()"/> -->
+
+    <!-- <p id="message">Message shown</p> -->
+
+    <!-- <p id="out"></p> -->
+
+    <!-- <input type="button" value="show" onclick="display()"/> 
+    <ul id="list"></ul> -->
+
+    <!-- <input type="button" value="load" onclick="load()"/> 
+    <p id="msg"></p> -->
+
+    <!-- <input type="button" value="get size" onclick="getsize()"/>
+    <p id="out"></p> -->
+
+    <!-- <p id="out"></p> -->
+
+    <!-- <p id="out"></p> -->
+
+    <!-- <input type="button" value="call" id="btn" onclick="callapi()"/> -->
+
+    <input type="button" value="save" onclick="reload()"/>
+
+
+</body>
+<script>
+    // function check(){
+    //     try{
+    //         if(num.value==="")
+    //         throw "Input cannot be empty";
+    //     }catch(e){
+    //         er.innerText="error:"+e;
+    //     }
+    // }
+
+    // function getuser(){
+    //     res.innerText="User Name: Alex";
+    // }
+
+    // function load(){
+    //     msg.innerText="loading.....";
+    //     setTimeout(()=>
+    //     msg.innerText="Data loaded successfully",2000
+    // );
+    // }
+
+    // function agecheck(){
+    //     if(age.value<18)
+    //     alert("not eligible");
+    // }
+
+    // async function count() {
+    //     out.innerText="Total Posts: 100"
+    // }
+
+    // new Promise(res=>setTimeout(res,5000)).then(()=>welcome.innerText="Welcome User");
+
+    // function Confirm(){
+    //     if(!confirm("allow api call?")){
+    //         msg.innerText="Request cancelled by user";
+    //     }
+    // }
+
+    // function validate(){
+    //     try{
+    //         if(uname.value.length<5)
+    //         throw "Username must be at least 5 characters";
+    //     }catch(e){
+    //         err.innerText="error:"+e;
+    //     }
+    // }
+
+    // function wrong(){
+    //     msg.innerText="Error: Failed to fetch data";
+    // }
+
+    // function bgcolor(){
+    //     document.body.style.background="green";
+    // }
+
+    // setTimeout(()=>message.style.display="none",3000);
+
+    // localStorage.setItem("user","John");
+    // out.innerText="Stored Username:"+localStorage.getItem("user");
+
+    // window.location.href="error.html";
+
+    // function display(){
+    //     ["user1","user2"].forEach(u=>{
+    //         let li=document.createElement("li");
+    //         li.innerText=u;
+    //         list.appendChild(li);
+    //     });
+    // }
+
+    // function load(){
+    //     Promise.all([Promise.resolve(),Promise.resolve()]).then(()=>msg.innerText="Users & Posts loaded");
+    // }
+
+    // function getsize(){
+    //     out.innerText=`width:${window.innerWidth}px,height:${window.innerHeight}px`;
+    // }
+
+    // async function fetchData(){
+    //     try{
+    //         out.innerText="Data fetched";
+    //     }catch{
+    //     }finally{
+    //         out.innerText+="\nProcess completed";
+    //     }
+    // }fetchData();
+
+    // let name=prompt("Enter name");
+    // out.innerText="Hello "+name;
+
+    // function callapi(){
+    //     btn.disabled=true;
+    //     setTimeout(()=>btn.disabled=false,2000);
+    // }
+
+    function reload(){
+        location.reload();
+    }
+</script>
+
+</html>
