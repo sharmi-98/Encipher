@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task Manager</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 600px;
+    background: #eaf5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    width: 420px;
+    background: #ffffff;
+    padding: 25px 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+
+.container h1{
+    text-align: center;
+    color: #1f6fe5;
+    margin-bottom: 20px;
+}
+
+.input-row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-row input{
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 2px solid #1f6fe5;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-row button{
+    padding: 10px 16px;
+    background: #1f6fe5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #dcdcdc;
+}
+
+.left input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    accent-color: #3cb371; 
+    cursor: pointer;
+}
+.left input[type="checkbox"]:checked + span{
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.check{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #3cb371;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3cb371;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.check.box{
+    border-radius: 6px;
+    border: 2px solid #1f6fe5;
+    color: #3cb371;
+}
+
+.task span{
+    font-size: 14px;
+    color: #555;
+}
+
+.done{
+    text-decoration: line-through;
+    color: #999;
+}
+
+.remove{
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Task Manager</h1>
+
+    <div class="input-row">
+        <input type="text" id="Input" placeholder="What needs to be done?">
+        <button onclick="task()">Add Task</button>
+    </div>
+    <div id="List">
+
+    <div class="task">
+    <div class="left">
+        <input type="checkbox" checked>
+        <span>Task A</span>
+    </div>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="task">
+    <div class="left">
+        <input type="checkbox">
+        <span>Task B</span>
+    </div>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="task">
+    <div class="left">
+        <input type="checkbox" checked>
+        <span>Task C</span>
+    </div>
+    <button class="remove">Remove</button>
+</div>
+</div>
+</div>
+
+</body>
+<script>
+function task(){
+    let input=document.getElementById("Input");
+    let text=input.value.trim();
+    if(text===""){
+        alert("Enter task");
+        return;
+    }
+    let List=document.getElementById("List");
+    let Div=document.createElement("div");
+    Div.className="task";
+    Div.innerHTML=`
+        <div class="left">
+        <input type="checkbox" onchange="toggleTask(this)">
+        <span>${text}</span>
+        </div>
+        <button class="remove" onclick="removeTask(this)">Remove</button>
+        `;
+        List.appendChild(Div);
+        input.value="";
+}
+function removeTask(btn){
+    btn.parentElement.remove();
+}
+function toggleTask(checkbox){
+    let span=checkbox.nextElementSibling;
+    span.classList.toggle("done");
+}
+</script>
+
+</html>
