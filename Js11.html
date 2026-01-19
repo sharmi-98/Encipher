@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+    font-family:sans-serif;
+    background:linear-gradient(135deg,#a8edea,#fcccdb);
+    }
+    .form-box{
+    width:350px;
+    background:white;
+    padding:20px;
+    margin:100px auto;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+    }
+    .form-box h1{
+    text-align:center;
+    }
+    input,select,textarea{
+    width:90%;
+    padding:8px;
+    margin:8px;
+    font-size:15px;
+    border-radius:10px;
+    border:1px solid gray;
+    }
+    .radio{
+    margin-top:8px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    }
+    .radio label{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+    }
+    textarea{
+    resize:none;
+    }
+    button{
+    width:100px;
+    padding:10px;
+    background-color:rgb(250, 133, 153);
+    color:black;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    margin:10px 120px;
+    box-shadow:0 0 10px #fcccdb;
+    }
+    button:hover{
+    background:black;
+    color:white;
+    }
+    table{
+    width:90%;
+    margin:20px auto;
+    border-collapse:collapse;
+    background:linear-gradient(135deg,#ecfaf9,#fed6e3);
+    }
+    th,td{
+    border:1px solid black;
+    padding:8px;
+    text-align:center;
+    }
+    .button{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    }
+    .button button{
+    width:auto;
+    padding:12px 16px;
+    margin:0;
+    font-size:14px;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h1>LOGIN</h1>
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" id="user">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password (Start with capital)" id="pass">
+        <label>Email</label>
+        <input type="email" placeholder="Enter email (Eg:sharmi18@gmail.com)" id="email">
+        <label>Date</label>
+        <input type="date" id="date">
+        <label>Gender</label>
+        <div class="radio">
+        <label><input type="radio" name="gender" value="male">Male</label>
+        <label><input type="radio" name="gender" value="female">Female</label>
+        </div><br>
+        <label>Department</label>
+        <select id="dept">
+            <option>Select Department</option>
+            <option>CSE</option>
+            <option>AIDS</option>
+            <option>ECE</option>
+            <option>EEE</option>
+        </select>
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter Address" id="address"></textarea>
+        <button type="button" onclick="submit()">Submit</button>
+    </div>
+    <table id="data">
+        <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Address</th>
+        <th>Edit or Delete</th>
+        </tr>
+    </table> 
+</body>
+<script>
+    let editindex=null;
+    function submit(){
+    let user=document.getElementById("user").value;
+    let pass=document.getElementById("pass").value;
+    let email=document.getElementById("email").value;
+    let date=document.getElementById("date").value;
+    let dept=document.getElementById("dept").value;
+    let address=document.getElementById("address").value;
+    let gender=document.querySelector('input[name="gender"]:checked');
+    let userpattern=/^[a-zA-Z0-9]{5,}$/;
+    let passpattern=/^[A-Z][a-z0-9]*[@#_%!$^\.\-]*$/;
+    let emailpattern=/^[A-Za-z0-9_\-\.]*[@][a-z]+[\.][a-z]{2,3}$/
+    if(!user||!pass||!email||!date||!gender||dept==="Select Department"){
+        alert("Fill all the field");
+        return;
+    }
+    if(!userpattern.test(user)||!passpattern.test(pass)||!emailpattern.test(email)){
+        alert("Invalid");
+        return;
+    }
+    let Data={
+        user,
+        pass,
+        email,
+        date,
+        gender:gender.value,
+        dept,
+        address
+    };
+    let data=JSON.parse(localStorage.getItem("users"))|| [];
+    if(editindex!==null){
+        data[editindex]=Data;
+        editindex=null;
+    }else{
+    data.push(Data);
+    }
+    localStorage.setItem("users",JSON.stringify(data));
+    loadTable();
+    }
+    function loadTable(){
+        let table=document.getElementById("data");
+        table.innerHTML=`
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th>Edit or Delete</th>
+        </tr>`;
+        let data=JSON.parse(localStorage.getItem("users"))|| [];
+        data.forEach((d,index)=>{
+            let row=table.insertRow();
+            row.insertCell(0).innerHTML=d.user;
+            row.insertCell(1).innerHTML=d.pass;
+            row.insertCell(2).innerHTML=d.email;
+            row.insertCell(3).innerHTML=d.date;
+            row.insertCell(4).innerHTML=d.gender;
+            row.insertCell(5).innerHTML=d.dept;
+            row.insertCell(6).innerHTML=d.address;
+            row.insertCell(7).innerHTML=`
+            <div class="button">
+            <button onclick="edit(${index})">Edit</button>
+            <button onclick="deletedata(${index})">Delete</button>
+            </div>
+            `;
+        });
+    }
+    function edit(index){
+        let data=JSON.parse(localStorage.getItem("users"));
+        let d=data[index];
+        document.getElementById("user").value=d.user;
+        document.getElementById("pass").value=d.pass;
+        document.getElementById("email").value=d.email;
+        document.getElementById("date").value=d.date;
+        document.getElementById("dept").value=d.dept;
+        document.getElementById("address").value=d.address;
+        document.querySelector(`input[name="gender"][value="${d.gender}"]`).checked=true;
+        editindex=index;
+    }
+    function deletedata(index){
+       let data=JSON.parse(localStorage.getItem("users"));
+       data.splice(index,1);
+       localStorage.setItem("users",JSON.stringify(data));
+       loadTable(); 
+    }
+    window.onload=loadTable;
+</script>
+</html>
