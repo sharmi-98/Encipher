@@ -1,85 +1,70 @@
-Day-7:
-Task 1 – Blog Homepage
-Description: A simple blog homepage using semantic HTML tags to structure content like header, navigation, main content, sidebar, and footer.
-Output:
-  Header with the blog title “Task-1” and navigation links: Home, About, Categories, Contact.
-  Main section listing three blog posts:
-  what is Semantic HTML? – Explains semantic tags for accessibility and SEO.
-  Introduction to CSS Layouts – Talks about Flexbox and Grid layouts.
-  Basics of JavaScript – Overview of JavaScript interactivity.
-  Sidebar with “About Me” section and recent posts list.
-  Footer with copyright notice.
+# Getting Started with Create React App
 
-Task 2 – Video Gallery
-Description: A webpage showcasing multiple videos using <video>, <section>, and <article> semantic structure.
-Output:
-  Header with the title “Task-2”.
-  Section “Latest Videos” with three video articles:
-  Nature Video – Video of forests and waterfalls.
-  Motivational Speech – Video to boost confidence.
-  Travel Vlog – Video of travel destinations.
-  Each video includes a title, video player, and short description.
-  Footer with copyright information.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Task 3 – Music Player Page
-Description: A music player webpage using <audio> with semantic tags.
-Output:
-  Header with “Task-3” and navigation links (Home, Playlists, Artists, Albums).
-  Section “Trending Songs” with three audio articles:
-  Peaceful Mind – Soft relaxing music with audio player.
-  Energy Boost – Motivational track for workouts.
-  Travel Vibes – Refreshing tune for long drives.
-  Each song includes title, audio controls, and short description.
-  Footer with copyright.
+## Available Scripts
 
-Task 4 – Education Website Homepage
-Description: An education website homepage with embedded video and audio media using semantic tags.
-Output:
-  Header with “Task-4” and navigation links (Home, Courses, Admissions, Contact).
-  Section “Welcome to Our Education Platform” with introduction text.
-  Section with introduction video and description.
-  Section with online class recording video.
-  Section with audio lesson and description.
-  Footer with copyright.
+In the project directory, you can run:
 
-Task 5 – News Portal
-Description: A news portal webpage with multiple news articles using <article>, <section>, and embedded <iframe> for videos.
-Output:
-  Header with “Task-5”.
-  Section “Top Headlines” with three news articles:
-  Technology – AI Transforming the World – Summary + embedded YouTube video.
-  Sports – Championship Highlights – Summary + embedded video.
-  World – Climate Change Concerns – Summary + embedded video.
-  Footer with copyright.
+### `npm start`
 
-Task 6 – Travel Website “City Guide”
-Description: A travel website with multiple sections describing a city and embedded media.
-Output:
-  Header with “Task-6” and navigation links (About, Places to Visit, Food, Media, Contact).
-  About section describing Paris.
-  Places to Visit section with articles:
-  Eiffel Tower – Image and description.
-  Louvre Museum – Image and description.
-  Food section listing Croissant and Macarons with descriptions.
-  Media section with embedded travel video and audio of Paris street sounds.
-  Sidebar with travel tips: best time to visit, currency, language.
-  Footer with copyright.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Task 7 – Job Application Page
-Description: A form for job applicants to submit personal information and upload resume.
-Output:
-  Header with “Task-7” and instructions.
-  Form fields:
-    Full Name, Email, Phone, Address,Position Applying For, Experience
-  Upload Resume (PDF/DOC)
-  Cover Letter / Message
-  Submit button.
-  Footer thanking applicant.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Task 8 – Embedded YouTube Video and Map
-Description: A webpage displaying an embedded YouTube video and a Google Map.
-Output:
-  Header with Task-8.
-  Section showing a YouTube video embedded in the page.
-  Section showing a Google Map embedded in the page.
-  Footer with copyright.
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
